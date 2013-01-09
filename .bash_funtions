@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Load average
+function LA {
+LANG=C  uptime | \
+        sed 's/,//g' | \
+        egrep -o '([0-9]+\.[0-9]+)\ ([0-9]+\.[0-9]+)\ ([0-9]+\.[0-9]+)'
+}
+
+# Get IPs
+function GETIPS {
+   LANC=C   ip addr | grep -E  "tun0|eth0|wlan0" | grep -E "inet" |  awk -F ' ' '{ print $7":"$2}' | sed ':a;N;$!ba;s/\n/ /g'
+}
+
+
+
