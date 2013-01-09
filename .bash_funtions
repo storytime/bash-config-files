@@ -12,5 +12,9 @@ function GETIPS {
    LANC=C   ip addr | grep -E  "tun0|eth0|wlan0" | grep -E "inet" |  awk -F ' ' '{ print $7":"$2}' | sed ':a;N;$!ba;s/\n/ /g'
 }
 
+# Kill vpn prc
+function down {
+  LANC=C sudo kill -9 $(ps aux | grep openvpn | grep -v grep | awk -F ' ' '{ print $2 }' | sed ':a;N;$!ba;s/\n/ /g')
+}
 
 

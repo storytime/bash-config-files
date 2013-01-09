@@ -1,0 +1,17 @@
+[user]
+	name = Bogdan
+	email = bgdpub@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[alias]
+	st = status
+        ci = commit
+        co = checkout
+        pa = push --all
+        pt = push --tags
+        out=log origin/HEAD..master
+        dc=diff --color-words
+        undo=reset --hard HEAD

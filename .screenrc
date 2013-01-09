@@ -1,0 +1,11 @@
+vbell off
+startup_message off
+defscrollback 100000
+shelltitle "> |bash"
+shell -$SHELL
+termcapinfo xterm ti@:te@
+termcapinfo xterm 'hs:ts=;:fs=:ds=;'
+hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
+bindkey "^[w" next
+bindkey "^[q" prev
+shell -$SHELL

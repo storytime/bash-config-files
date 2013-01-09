@@ -31,11 +31,16 @@ echo -e "$bldwht -$txtylw "tar xvf archive.tar.bz" $txtred extract $txtrst"
 echo -e "$bldwht -$txtylw "tar cvf file.tar" $txtred create tar $txtrst"
 echo -e "$bldwht -$txtylw "chown -R user:group /path/to/" $txtred chmod recursive $txtrst"
 echo -e "$bldwht -$txtylw "serv: nc -u -l -p 40101  cl: nc -u IP 40101" $txtred test ports $txtrst"
-echo -e "$bldwht -$txtylw "cat /etc/passwd "|" awk -F ':' '{ print $1 }'" $txtred list users $txtrst"
+echo -e "$bldwht -$txtylw "cat /etc/passwd "|" awk -F "'":"'" "'"{ print "$"1 }"'"" $txtred list users $txtrst"
 echo -e "$bldwht -$txtylw "find . -name "*.class" -type f" $txtred find $txtrst"
 echo -e "$bldwht -$txtylw "find . -type f -mtime +60 -name "'*.tmp'" -exec ls -l "{}" "\;"" $txtred find by time and exec $txtrst"
 echo -e "$bldwht -$txtylw "rsync -avz --progress user@host:/tmp /tmp" $txtred rsync from remote $txtrst"
 echo -e "$bldwht -$txtylw "rsync -avz --progress -e ssh user@host:/tmp /tmp" $txtred rsync via ssh $txtrst"
+echo -e "$bldwht -$txtylw "git reset --hard HEAD/HEAD~1" $txtred  eset changes/reset commits $txtrst"
+echo -e "$bldwht -$txtylw "git rebase -i HEAD~X" $txtred squash commits $txtrst"
+echo -e "$bldwht -$txtylw "git tag -a 0.0.1 / git push --tags" $txtred create/push tags $txtrst"
+echo -e "$bldwht -$txtylw "git tag -d 1 0.0.1 or git push origin :refs/tags/12345" $txtred delete tags $txtrst"
+
 
 #old
 
