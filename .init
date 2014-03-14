@@ -17,6 +17,9 @@ if [ $(echo "$os" |  egrep  -ohi "ubuntu") ]; then
 	sudo apt-get install zsh git-core git wget openssh-client openssh-server curl aptitude mc screen vim openssh-client openssh-server -y
 fi
 
+# install oh my zsh
+curl -L http://install.ohmyz.sh | sh
+
 # copy settings
 cd /tmp
 git clone https://github.com/storytime/shell-config-files
@@ -24,14 +27,16 @@ rm -rf /tmp/shell-config-files/.git
 rsync -avz -u --progress  /tmp/shell-config-files/* ~/
 rsync -avz -u --progress  /tmp/shell-config-files/.* ~/
 
+# setup ssh
 echo "" >> ~/.ssh/authorized_keys
 wget --no-check-certificate -q -O - https://raw.github.com/storytime/shell-config-files/master/.ssh/my_id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
+
+# etc
 rm -rf /tmp/shell-config-files/
 rm  ~/README.md
 
-# copy install packages and zsh
-curl -L http://install.ohmyz.sh | sh
 
-mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+
+
