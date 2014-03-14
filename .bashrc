@@ -1,10 +1,10 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-. ~/.shell_colors
-. ~/.shell_functions
-. ~/.shell_aliases
-. ~/.shell_vars
+. ~/.shell/.shell_colors
+. ~/.shell/.shell_functions
+. ~/.shell/.shell_aliases
+. ~/.shell/.shell_vars
 
 # If not running interactively, don't do anything
 case $- in

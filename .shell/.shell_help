@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ~/.shell_colors
+. ~/.shell/.shell_colors
 
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red

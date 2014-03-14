@@ -47,9 +47,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.shell_aliases
-source $HOME/.shell_vars
-source $HOME/.shell_functions
+source $HOME/.shell/.shell_aliases
+source $HOME/.shell/.shell_vars
+source $HOME/.shell/.shell_functions
 
 # User configuration
 
