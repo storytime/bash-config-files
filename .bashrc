@@ -1,8 +1,10 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-. ~/.bash_colors
-. ~/.bash_funtions
+. ~/.shell_colors
+. ~/.shell_functions
+. ~/.shell_aliases
+. ~/.shell_vars
 
 # If not running interactively, don't do anything
 case $- in
@@ -111,4 +113,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-amd64"
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/pollux/.gvm/bin/gvm-init.sh" ]] && source "/home/pollux/.gvm/bin/gvm-init.sh"

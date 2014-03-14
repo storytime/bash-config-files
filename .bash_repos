@@ -1,9 +1,0 @@
-#!/bin/bash
-sudo add-apt-repository  ppa:jtaylor/keepass
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-sudo add-apt-repository  ppa:groovy-dev/grails 
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-
-#unstable
-sudo add-apt-repository  ppa:debfx/virtualbox
