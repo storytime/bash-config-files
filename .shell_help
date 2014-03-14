@@ -1,0 +1,48 @@
+#!/bin/bash
+
+. ~/.shell_colors
+
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+txtrst='\e[0m'    # Text Reset
+
+#template
+#echo -e "$bldwht -$txtylw "" $txtred  $txtrst"
+
+echo -e "$bldwht -$txtylw "mount -l" $txtred mount params $txtrst"
+echo -e "$bldwht -$txtylw "mount -o remount,rw /path/to/ " $txtred remount /path/to/ rw $txtrst"
+echo -e "$bldwht -$txtylw "dd if=/dev/zero of=file1G.tmp bs=1M count=10" $txtred create empty file $txtrst"
+echo -e "$bldwht -$txtylw "wget -r -k -l0 -p -E -nc http://site.com/" $txtred wget site $txtrst"
+echo -e "$bldwht -$txtylw "tar xvf archive.tar.bz" $txtred extract $txtrst"
+echo -e "$bldwht -$txtylw "tar cvf file.tar" $txtred create tar $txtrst"
+echo -e "$bldwht -$txtylw "chown -R user:group /path/to/" $txtred chmod recursive $txtrst"
+echo -e "$bldwht -$txtylw "serv: nc -u -l -p 40101  cl: nc -u IP 40101" $txtred test ports $txtrst"
+echo -e "$bldwht -$txtylw "cat /etc/passwd "|" awk -F "'":"'" "'"{ print "$"1 }"'"" $txtred list users $txtrst"
+echo -e "$bldwht -$txtylw "find . -name "*.class" -type f" $txtred find $txtrst"
+echo -e "$bldwht -$txtylw "find . -type f -mtime +60 -name "'*.tmp'" -exec ls -l "{}" "\;"" $txtred find by time and exec $txtrst"
+echo -e "$bldwht -$txtylw "rsync -avz --progress user@host:/tmp /tmp" $txtred rsync from remote $txtrst"
+echo -e "$bldwht -$txtylw "rsync -avz --progress -e ssh user@host:/tmp /tmp" $txtred rsync via ssh $txtrst"
+echo -e "$bldwht -$txtylw "git reset --hard HEAD/HEAD~1" $txtred  eset changes/reset commits $txtrst"
+echo -e "$bldwht -$txtylw "git rebase -i HEAD~X" $txtred squash commits $txtrst"
+echo -e "$bldwht -$txtylw "git tag -a 0.0.1 / git push --tags" $txtred create/push tags $txtrst"
+echo -e "$bldwht -$txtylw "git tag -d 1 0.0.1 or git push origin :refs/tags/12345" $txtred delete tags $txtrst"
+echo -e "$bldwht -$txtylw "curl -v -H \"Accept: application/json\" -H \"Content-type: application/json\" -X POST -d "'"{\"title\":\"test\"}"'"  http://localhost:9001/json/post " $txtred post json  $txtrst"
+
+#old
+
+#echo -e "$bldwht -$txtylw "sudo rm /etc/ssh/ssh_host_* "&&" sudo ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key "&&" sudo ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key "&&" sudo ssh-keygen -t rsa1 -f /etc/ssh/ssh_host_rsa1_key "&&" sudo /etc/init.d/ssh start" $txtred ssh-key-problem $txtrst"
+#echo -e "$bldwht -$txtylw "tar -zxvf archive.tar.gz" $txtred extract tar.gz $txtrst"

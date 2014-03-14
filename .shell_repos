@@ -1,0 +1,4 @@
+#!/bin/bash
+add-apt-repository  ppa:jtaylor/keepass
+add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+add-apt-repository  ppa:groovy-dev/grails 

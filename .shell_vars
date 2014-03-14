@@ -1,0 +1,3 @@
+export JAVA_HOME="/usr/lib/jvm/java-7-oracle/"
+export CATALINA_HOME="/mnt/storage/soft/apache-tomcat-7.0.42/"
+export GTS_HOME="/home/pollux/odesk/William/GTS_Enterprise"

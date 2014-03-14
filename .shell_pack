@@ -1,0 +1,7 @@
+#!/bin/bash
+apt-get  update && apt-get  upgrade
+
+apt-get install davfs2 p7zip  p7zip-full  p7zip-rar  google-chrome-stable calibre aptitude yakuake vim git-core subversion mc gcc g++ cpp make screen openvpn ssh network-manager-openvpn  firefox thunderbird nmap htop gimp  pidgin  pidgin-data  pidgin-extprefs wireshark mono-complete keepass2 vlc openjdk-7-jdk openjdk-7-doc  openjdk-7-demo  ant maven grails-ppa  virtualbox  virtualbox-guest-additions-iso skype
+
+aptitude remove ktorrent kaddressbook kwalletmanager kontact korganizer rekonq kmail  skanlite dragonplayer kppp  krita-* akregator quassel quassel-data
+
