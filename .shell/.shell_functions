@@ -59,5 +59,8 @@ pk () {
 get_packs(){
 	apt-get install davfs2 p7zip  p7zip-full  p7zip-rar calibre aptitude vim git-core subversion mc gcc g++ \
 	cpp make screen openvpn ssh network-manager-openvpn  firefox thunderbird nmap htop gimp  wireshark mono-complete \
-	keepass2 vlc openjdk-7-jdk ant maven
+	keepass2 vlc openjdk-7-jdk ant maven;
+
+	# install gvm
+	curl -s get.gvmtool.net | bash
 }
