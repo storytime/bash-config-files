@@ -63,4 +63,9 @@ get_packs(){
 
 	# install gvm
 	curl -s get.gvmtool.net | bash
+
+	#install oracle JDK
+	sudo add-apt-repository ppa:webupd8team/java
+	sudo apt-get update
+	sudo apt-get install oracle-java7-installer
 }
