@@ -4,6 +4,7 @@ alias l='ls -lhas'
 alias update="sudo apt-get update && sudo apt-get upgrade"
 alias die='sudo sync && sudo shutdown -h now'
 alias get='sudo apt-get install '
+alias rem='sudo apt-get remove '
 alias search='sudo aptitude search '
 alias duu='du -hs .[^.]*'
 alias grepp='grep -E "^[a-z]"'
@@ -16,5 +17,5 @@ alias spl='sudo nmap -sS -p0-65535 -P0 -T4 --osscan_limit --osscan_guess --host_
 alias sp='sudo nmap --min-parallelism 100 -sT -sU'
 alias flush='sudo free && sync && sudo echo 3 > /proc/sys/vm/drop_caches && sudo free && sudo echo 0 > /proc/sys/vm/drop_caches'
 alias p='ping google.com'
-alias h='bash ~/.shell_help'
-alias run="java -jar"
+
+alias h='bash ~/.shell/.shell_help'

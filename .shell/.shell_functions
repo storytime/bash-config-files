@@ -56,54 +56,8 @@ pk () {
 	fi
 } 
 
-
-initenv(){
-	
-	if [ -f /etc/lsb-release ]; then
-
-        os=$(lsb_release -s -d)
-
-		elif [ -f /etc/debian_version ]; then
-		        os="Debian $(cat /etc/debian_version)"
-		elif [ -f /etc/redhat-release ]; then
-		        os=`cat /etc/redhat-release`
-		else
-		        os="$(uname -s) $(uname -r)"
-	fi
-
-	echo "System: $os"
-
-	if [ $(echo "$os" |  egrep  -ohi "ubuntu") ]; then
-	 	#prepare
-		sudo apt-get install zsh git-core git wget openssh-client openssh-server curl aptitude mc screen vim openssh-client openssh-server -y
-	fi
-
-	# install oh my zsh
-	curl -L http://install.ohmyz.sh | sh
-
-	# copy settings
-	cd /tmp
-	git clone https://github.com/storytime/shell-config-files
-	rm -rf /tmp/shell-config-files/.git
-	rsync -avz -u --progress  /tmp/shell-config-files/* ~/
-	rsync -avz -u --progress  /tmp/shell-config-files/.* ~/
-
-	# setup ssh
-	echo "" >> ~/.ssh/authorized_keys
-	wget --no-check-certificate -q -O - https://raw.github.com/storytime/shell-config-files/master/.ssh/my_id_rsa.pub >> ~/.ssh/authorized_keys
-	chmod 700 ~/.ssh
-	chmod 600 ~/.ssh/authorized_keys
-
-	# etc
-	rm -rf /tmp/shell-config-files/
-	rm  ~/README.md
-
-
-	echo "Exit..."
-}
-
 get_packs(){
 	apt-get install davfs2 p7zip  p7zip-full  p7zip-rar calibre aptitude vim git-core subversion mc gcc g++ \
 	cpp make screen openvpn ssh network-manager-openvpn  firefox thunderbird nmap htop gimp  wireshark mono-complete \
-	keepass2 vlc openjdk-7-jdk ant maven grails-ppa  virtualbox  virtualbox-guest-additions-iso skype
+	keepass2 vlc openjdk-7-jdk ant maven
 }
