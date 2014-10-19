@@ -39,3 +39,4 @@ rm  ~/README.md > /dev/null
 rm -rf ~/shell-config-files > /dev/null
 
 chsh -s $(which zsh)
+chsh -s $(which zsh) vagrant
